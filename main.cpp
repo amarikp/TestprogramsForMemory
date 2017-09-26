@@ -1,5 +1,27 @@
 
 
+#if 0
+#include<stdio.h>
+
+int divisbleBy8(int n){
+
+
+    n=n&(n-1);
+
+    return !n;
+
+}
+
+int main()
+{
+
+    printf("%s",(divisbleBy8(18))? "true":"false");
+
+
+}
+
+#endif
+
 
 #if 0
 #include<stdio.h>
