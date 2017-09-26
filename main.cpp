@@ -1,4 +1,67 @@
 
+#if 0
+#include<stdio.h>
+
+
+
+int divisbleBy8(int n){
+
+
+    n=n&7;
+
+    return !n;
+
+}
+
+int divisbleBy32_one(int n){
+
+    int flag=0;
+
+    for(int i=0;i<4;i++){
+
+    flag = divisbleBy8(n);
+    if(!flag) return 0;
+    n-=32;
+    if(n==32) return 1;
+    }
+
+    return 1;
+
+
+}
+
+
+int divisbleBy32(int n){
+
+    int flag=0;
+
+    n=n&31;
+
+    return !n;
+
+
+
+
+}
+
+int main()
+{
+
+    printf("divisble by 32 %s\n",(divisbleBy32(18))? "true":"false");
+    printf("divisble by 32 %s\n",(divisbleBy32(64))? "true":"false");
+    printf("divisble by 32 %s\n",(divisbleBy32(1088))? "true":"false");
+    printf("divisble by 32 %s\n",(divisbleBy32(1081))? "true":"false");
+
+    printf("divisble by 32 %s\n",(divisbleBy32(832))? "true":"false");
+    printf("divisble by 32 %s\n",(divisbleBy32(832+55))? "true":"false");
+
+
+
+}
+
+#endif
+
+
 
 #if 0
 #include<stdio.h>
@@ -6,7 +69,7 @@
 int divisbleBy8(int n){
 
 
-    n=n&(n-1);
+   n=n&7;
 
     return !n;
 
