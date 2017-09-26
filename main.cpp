@@ -1,6 +1,39 @@
 
 
 #if 0
+#include<stdio.h>
+
+int
+numberofone(int n){
+
+    int count=0;
+
+    for(;n;){
+        count++;
+        n=n&(n-1);
+    }
+
+    return count;
+}
+
+
+int main()
+{
+
+    printf("Number of one=%d\n",numberofone(4));
+    printf("Number of one=%d\n",numberofone(2));
+    printf("Number of one=%d\n",numberofone(3));
+    printf("Number of one=%d\n",numberofone(5));
+
+
+
+
+}
+
+#endif
+
+
+#if 0
 
 #include <iostream>
 #include<string.h>
