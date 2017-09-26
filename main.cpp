@@ -1,4 +1,32 @@
 
+
+#if 0
+
+#include<stdio.h>
+
+int main(int argc,char **argv)
+{
+    int a[10];
+
+    char data[100];
+    int one,two;
+
+    sprintf(data,"%X",a);
+    sscanf(data,"%X",&one);
+
+    sprintf(data,"%X",((&a)+1));
+    sscanf(data,"%X",&two);
+
+
+    //a+1 will jump with size of int
+    //((&a)+1) will jump with the size of Array
+
+    printf("a=%X a+1=%X ((&a)+1)=%X a=%X two-one=%d \n",a,(a+1),((&a)+1),a, two-one );
+
+}
+#endif
+
+
 #if 0
 #include<stdio.h>
 
